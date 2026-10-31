@@ -154,112 +154,6 @@
             margin: 2rem 0;
         }
 
-        /* Deletion request email card */
-        .email-section {
-            background: #1a1a1a;
-            border-radius: 12px;
-            padding: 1.75rem 2rem;
-            margin-top: 1.5rem;
-            border: 1px solid #222;
-        }
-
-        .info-row {
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .info-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #888;
-            font-weight: 600;
-        }
-
-        .info-value {
-            font-size: 1.05rem;
-            color: #ffffff;
-            font-family: 'Consolas', 'Courier New', monospace;
-            background: #0d0d0d;
-            padding: 0.6rem 0.9rem;
-            border-radius: 6px;
-            border: 1px solid #292929;
-            word-break: break-all;
-        }
-
-        .template-box {
-            background: #0d0d0d;
-            border: 1px solid #292929;
-            border-radius: 6px;
-            padding: 0.75rem 1rem;
-            font-family: 'Consolas', 'Courier New', monospace;
-            font-size: 0.85rem;
-            color: #ccc;
-            white-space: pre-wrap;
-            margin-top: 0.5rem;
-            line-height: 1.5;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        .primary-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            background: #f44336;
-            color: #ffffff;
-            border: none;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .primary-btn:hover {
-            background: #d32f2f;
-            text-decoration: none;
-        }
-
-        .secondary-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.25rem;
-            background: #252525;
-            color: #e0e0e0;
-            border: 1px solid #333;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.2s, border-color 0.2s;
-        }
-
-        .secondary-btn:hover {
-            background: #303030;
-            border-color: #444;
-        }
-
-        .copy-toast {
-            display: none;
-            color: #4caf50;
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
         .footer {
             margin-top: 3rem;
             padding-top: 1.5rem;
@@ -324,41 +218,8 @@
         </ul>
 
         <h3>Option 2: Request Deletion via Email</h3>
-        <p>If you no longer have access to the App or cannot sign in, you can request account deletion by emailing us directly. We will process your request within <strong>3 business days</strong>.</p>
-
-        <div class="email-section">
-            <div class="info-row">
-                <span class="info-label">Send Email To:</span>
-                <span class="info-value">rylpix.app@gmail.com</span>
-            </div>
-
-            <div class="info-row">
-                <span class="info-label">Subject Line:</span>
-                <span class="info-value">Account Deletion Request – Solve to Wake</span>
-            </div>
-
-            <div class="info-row">
-                <span class="info-label">Information to Include in Your Email:</span>
-                <div class="template-box">Hi,
-
-Please delete my Solve to Wake – Loud Alarm account and all associated cloud data.
-
-• Account Email: [The Google email you used to sign in]
-• Reason for Deletion: [Optional]
-
-Thank you.</div>
-            </div>
-
-            <div class="action-buttons">
-                <a href="mailto:rylpix.app@gmail.com?subject=Account%20Deletion%20Request%20%E2%80%93%20Solve%20to%20Wake&body=Hi%2C%0A%0APlease%20delete%20my%20Solve%20to%20Wake%20%E2%80%93%20Loud%20Alarm%20account%20and%20all%20associated%20cloud%20data.%0A%0A%E2%80%A2%20Account%20Email%3A%20%0A%E2%80%A2%20Reason%20for%20Deletion%20(optional)%3A%20%0A%0AThank%20you." class="primary-btn">
-                    Open in Email App
-                </a>
-                <button type="button" class="secondary-btn" onclick="copyEmail()">
-                    Copy Email Address
-                </button>
-            </div>
-            <p id="copyToast" class="copy-toast">✓ Email address copied to clipboard!</p>
-        </div>
+        <p>If you no longer have access to the App, send an email to <a href="mailto:rylpix.app@gmail.com?subject=Account%20Deletion%20Request%20%E2%80%93%20Solve%20to%20Wake"><strong>rylpix.app@gmail.com</strong></a> with the subject <strong>"Account Deletion Request"</strong>.</p>
+        <p>Please include the Google account email you used to sign in to the App. We will process your request and delete your cloud data within <strong>3 business days</strong>.</p>
 
         <hr class="divider">
 
@@ -384,20 +245,6 @@ Thank you.</div>
             <p>&copy; 2026 Solve to Wake – Loud Alarm. All rights reserved.</p>
         </div>
     </div>
-
-    <script>
-        function copyEmail() {
-            navigator.clipboard.writeText('rylpix.app@gmail.com').then(function() {
-                var toast = document.getElementById('copyToast');
-                toast.style.display = 'block';
-                setTimeout(function() {
-                    toast.style.display = 'none';
-                }, 3000);
-            }).catch(function() {
-                alert('Please email: rylpix.app@gmail.com');
-            });
-        }
-    </script>
 </body>
 
 </html>
